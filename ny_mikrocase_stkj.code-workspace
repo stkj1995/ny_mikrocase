@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "ny_mikrocase"
+		},
+		{
+			"path": "Mikrocase_stkj/.astro"
+		},
+		{
+			"path": "Mikrocase_stkj/.git"
+		},
+		{
+			"path": "Mikrocase_stkj/.vscode"
+		},
+		{
+			"path": "Mikrocase_stkj/dist"
+		},
+		{
+			"path": "Mikrocase_stkj/node_modules"
+		},
+		{
+			"path": "Mikrocase_stkj/public"
+		}
+	],
+	"settings": {}
+}
