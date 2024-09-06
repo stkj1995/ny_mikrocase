@@ -1,11 +1,9 @@
-@import 'animate.css';
+@import "animate.css";
 
-/* Tailwind Base */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Custom Animation */
 @layer base {
   #star {
     animation: twinkle 2s infinite;
@@ -27,9 +25,10 @@
   }
 }
 
-/* Global Styles */
-@layer components {
-  p {
-    @apply font-sans text-base text-white; /* Ændr disse klasser for at tilpasse efter dine behov */
-  }
+/* src/styles/global.css */
+p {
+  @apply font-sans text-base text-white; /* Ændr disse klasser for at tilpasse efter dine behov */
 }
+
+
+
