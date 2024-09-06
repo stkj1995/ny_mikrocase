@@ -1,0 +1,25 @@
+---
+const { href = "#", target = "_self", variant = "textlink", size = "medium" } = Astro.props;
+
+const variantClasses = {
+  primary: "text-white bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700  px-3 py-2 shadow-lg hover:shadow-xl transition-shadow duration-300",
+  secondary: "text-gray-800 bg-gray-300 hover:bg-gray-400  px-3 py-2 shadow-md hover:shadow-lg transition-shadow duration-300",
+  textlink: "text-white hover:text-yellow-500 hover:underline-offset-2 transition-all duration-300",
+  danger: "text-white bg-red-500 hover:bg-red-600 px-3 py-2 shadow-lg hover:shadow-xl transition-shadow duration-300",
+  success: "text-white bg-green-500 hover:bg-green-600  px-3 py-2 shadow-lg hover:shadow-xl transition-shadow duration-300",
+};
+
+const sizeClasses = {
+  small: "text-sm px-2 py-1",
+  medium: "text-base px-3 py-2",
+  large: "text-lg px-4 py-3",
+  textlink: "text-base px-0 py-0", // For textlink variant, no padding
+};
+
+// Combine the classes
+const linkStyling = `${variantClasses[variant] || variantClasses.textlink} ${sizeClasses[size] || sizeClasses.medium}`;
+---
+
+<a href={href} target={target} class={linkStyling}>
+  <slot />
+</a>
