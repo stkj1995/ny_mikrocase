@@ -5,27 +5,28 @@ import '../styles/tailwind.css';
 import 'animate.css';
 const { title } = Astro.props;
 ---
+
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{Astro.props.title}</title>
-	</head>
-	<body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-gray-800 text-white">
 
-		<header>
-			<Header></Header>
-		</header>
-		
-		<main>
-			<slot />
-		</main>
+    <header class="bg-gray-800 shadow">
+      <Header />
+    </header>
+    
+    <main class="min-h-screen">
+      <slot />
+    </main>
 
-		<footer>
-			<Footer></Footer>
-		</footer>
-			
-	</body>
+    <footer class="bg-gray-800 text-white py-6">
+      <Footer />
+    </footer>
+      
+  </body>
 </html>
