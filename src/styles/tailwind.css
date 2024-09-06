@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "animate.css";
+
+@layer base {
+  #star {
+    animation: twinkle 2s infinite;
+  }
+
+  @keyframes twinkle {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+/* src/styles/global.css */
+p {
+  @apply font-sans text-base text-white; /* Ændr disse klasser for at tilpasse efter dine behov */
+}
+
